@@ -11,6 +11,41 @@ header {
   grid-column: 2;
   grid-row: 1;
   background-color: antiquewhite;
+
+  display: grid;
+  grid-template-rows: 2fr 3fr;
+}
+
+.header-top {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+}
+
+.search {
+  display: flex;
+}
+
+.user-profile {
+  display: flex;
+}
+
+.header-bottom {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+}
+
+.user-info {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.large-avatar {
+  grid-row: 1 / 3;
+}
+
+.user-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /* Nav section */
