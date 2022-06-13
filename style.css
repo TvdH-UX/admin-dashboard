@@ -203,8 +203,16 @@ main {
   background-color: #F6F5F5;
 
   display: grid;
-  grid-template-columns: 6fr 3fr;
+  grid-template-columns: 7fr 3fr;
   gap: 2rem;
+}
+
+.user-projects,
+.announcements,
+.trending {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .projects {
@@ -214,39 +222,84 @@ main {
   gap: 2rem;
 }
 
+.project {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  cursor: pointer;
+  border-left: 8px solid #437590;
+}
+
+.project img {
+  filter: invert(3%) sepia(2%) saturate(1132%) hue-rotate(314deg) brightness(97%) contrast(64%);
+}
+
+.project:hover {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 16px 32px;
+}
+
+.project-info {
+  display: grid;
+  gap: .5rem;
+}
+
+.project-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.project-actions img {
+  height: 1.5rem;
+}
+
+.project-actions img:hover {
+  cursor: pointer;
+  filter: invert(56%) sepia(93%) saturate(1212%) hue-rotate(321deg) brightness(93%) contrast(100%);
+}
+
 aside {
   display: grid;
+  gap: 2rem;
+}
+
+aside h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
 }
 
 .project,
 .trending-card,
-.announcement-card {
+.announcement-grid {
   background-color: #fff;
   border-radius: 1rem;
 }
 
-.announcement-card {
+.announcement-grid {
+  box-sizing: border-box;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
+  gap: 1.2rem;
+  padding: 2rem;
 }
 
 .trending-card {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
+  gap: 1.2rem;
+  padding: 2rem;
 }
 
 .trending-tag {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  align-items: flex-start;
 }
 
-.trending-tag .tag-user {
+.tag-info {
   grid-column: 2;
   grid-row: 1;
-}
-
-.trending-tag .tag-project {
-  grid-column: 2;
-  grid-row: 2;
+  align-self: center;
 }
