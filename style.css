@@ -2,12 +2,22 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+p {
+  margin: 0;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 5fr;
   width: 100vw;
   height: 100vh;
+}
+
+.grid-container header,
+.grid-container nav,
+.grid-container main {
+  padding: 32px;
 }
 
 /* Header section */
@@ -56,20 +66,55 @@ header {
 nav {
   grid-column: 1;
   grid-row: 1/ -1;
-  background-color: brown;
+  background-color: #EE6F57;
+  color: #fff;
 
   display: grid;
   grid-template-rows: 1fr 9fr;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.logo img {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .nav-options {
   display: grid;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .nav-options ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
   list-style: none;
-  padding: 0;
+  padding-left: 16px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.nav-options li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-options li:hover {
+  font-weight: 700;
+}
+
+.nav-options img {
+  height: 1.4rem;
 }
 
 /* Main section */
